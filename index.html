@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ligue 1 Info</title>
+    <meta name="description" content="My first PWA" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="shortcut icon" type="image/png" href="img/Icon-32.png">
+    <link rel="apple-touch-icon" href="img/Icon-32.png">
+    
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#00897B" />
+  </head>
+  <body>
+    <nav class="blue darken-4" role="navigation">
+      <div class="nav-wrapper container">
+        <a href="/index.html" class="brand-logo" id="logo-container">
+          Ligue 1 Info
+        </a>
+        <a href="#" class="sidenav-trigger" data-target="nav-mobile"><i class="material-icons">menu</i></a>
+  
+        <ul class="topnav right hide-on-med-and-down"></ul>
+        <ul class="sidenav" id="nav-mobile"></ul>
+      </div>
+    </nav>
+    <div class="progress">
+      <div class="indeterminate blue darken-4"></div>
+    </div>
+    <div class="container" id="body-content"></div>
+
+    <footer class="page-footer blue darken-4">
+      <div class="footer-copyright">
+        <div class="container">
+        © 2020 MDR Development
+        <a class="grey-text text-lighten-4 right" href="https://www.facebook.com/isnu.mdr" target="blank">Contact Developer</a>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="js/materialize.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/app.js" type="module"></script>
+    <script src="js/idb.js"></script>
+  </body>
+</html>

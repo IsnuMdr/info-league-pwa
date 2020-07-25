@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ligue 1 Info</title>
+  <meta name="description" content="My first PWA" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/materialize.min.css" />
+  <link rel="stylesheet" href="css/sweetalert2.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link rel="shortcut icon" type="image/png" href="img/Icon-32.png">
+  <link rel="apple-touch-icon" href="img/Icon-32.png">
+
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#00897B" />
+</head>
+
+<body>
+  <!-- Navigasi -->
+  <nav class="blue darken-4" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="/index.html" class="brand-logo" id="logo-container">Ligue 1 Info</a>
+      <a href="./index.html#clubs" class="sidenav-trigger" data-target="nav-mobile">
+        <i class="material-icons">arrow_back</i>
+      </a>
+      <ul class="topnav right hide-on-med-and-down"></ul>
+      <ul class="sidenav" id="nav-mobile"></ul>
+    </div>
+  </nav>
+  <!-- Akhir Navigasi -->
+  <div class="progress">
+    <div class="indeterminate blue darken-4"></div>
+  </div>
+  <div class="container" id="body-content"></div>
+
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red" id="save">
+      <i class="large material-icons">favorite</i>
+    </a>
+  </div>
+
+  <script type="text/javascript" src="https://unpkg.com/snarkdown@1.0.2/dist/snarkdown.umd.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/sweetalert2.all.min.js"></script>
+  <script src="js/detail.js" type="module"></script>
+  <script src="js/idb.js"></script>
+</body>
+
+</html>
