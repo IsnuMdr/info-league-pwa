@@ -64,6 +64,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 })
             } else {
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You will remove this team from favorite.",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, remove it!'
+                })
                 btnSave.firstElementChild.innerText = 'favorite_border';
                 deleteFavTeam(item.id);
             }
