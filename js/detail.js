@@ -38,13 +38,14 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-    btnSave.onclick = async function () {
+    btnSave.addEventListener("click", async () => {
         console.log("Saved button clicked.");
         const isTeamSaved = await getById(idParam);
 
         if (!isTeamSaved) {
             btnSave.firstElementChild.innerText = 'favorite';
             saveForLater(item);
+            console.log(item);
         } else {
             if (isFromSaved) {
                 Swal.fire({
@@ -64,22 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 })
             } else {
                 btnSave.firstElementChild.innerText = 'favorite_border';
-                Swal.fire({
-                    title: 'Are you sure?',
-                    text: "You will remove this team from favorite.",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, remove it!'
-                }).then((result) => {
-                    if (result.value) {
-                        btnSave.firstElementChild.innerText = 'favorite_border';
-                        deleteFavTeam(item.id);
-                        window.location.href = 'index.html#favorite-clubs';
-                    }
-                })
+                deleteFavTeam(item.id);
             }
         }
-    }
+    })
 });
