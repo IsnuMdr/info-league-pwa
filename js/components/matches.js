@@ -60,7 +60,7 @@ function showMatches(data) {
         matchesHTML += `
                             <div class="line-content"> 
                             <div class="col s12 m6">
-                                <div class="card hoverable">
+                                <div class="card">
                                 <div class="card-content">
                                     <p><b>Matchday ${matchday} of 38</b></p>
                                     <p class="center">${getNewDate(date)} WIB</p>
