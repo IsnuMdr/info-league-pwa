@@ -34,7 +34,7 @@ if (workbox){
         { url: '/img/Icon-512.png', revision },
         { url: '/css/materialize.min.css', revision },
         { url: '/css/sweetalert2.min.css', revision },
-       
+        { url: '/css/style.css', revision }
     ], {
       ignoreURLParametersMatching: [/.*/]
     });
