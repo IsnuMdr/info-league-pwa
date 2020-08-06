@@ -55,7 +55,7 @@ function loadPage(page) {
             }
         }
     };
-    xhttp.open("GET", "pages/" + page + ".html", true);
+    xhttp.open("GET", `pages/${page}.html`, true);
     xhttp.send();
 }
 
