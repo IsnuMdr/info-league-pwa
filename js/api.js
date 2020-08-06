@@ -28,16 +28,6 @@ function error(error) {
 
 // Blok kode untuk melakukan request data json
 function getMatches() {
-    if ("caches" in window) {
-        caches.match(`${baseUrl}competitions/${idLeague}/matches`).then(function (response) {
-            if (response) {
-                response.json().then(function (data) {
-                    showMatches(data);
-                })
-            }
-        });
-    }
-
     fetch(`${baseUrl}competitions/${idLeague}/matches`, {
             headers: {
                 'X-Auth-Token': apiKey
@@ -52,16 +42,6 @@ function getMatches() {
 }
 
 function getClubs() {
-    if ("caches" in window) {
-        caches.match(`${baseUrl}competitions/${idLeague}/standings`).then(function (response) {
-            if (response) {
-                response.json().then(function (data) {
-                    showClubs(data);
-                })
-            }
-        });
-    }
-
     fetch(`${baseUrl}competitions/${idLeague}/standings`, {
             headers: {
                 'X-Auth-Token': apiKey
@@ -80,17 +60,6 @@ function getClubById() {
         let urlParams = new URLSearchParams(window.location.search);
         let idParam = urlParams.get("id");
 
-        if ("caches" in window) {
-            caches.match(`${baseUrl}teams/${idParam}/`).then(function (response) {
-                if (response) {
-                    response.json().then(function (club) {
-                        showDetails(club);
-                        resolve(club);
-                    });
-                }
-            });
-        }
-
         fetch(`${baseUrl}teams/${idParam}/`, {
                 headers: {
                     'X-Auth-Token': apiKey
@@ -106,15 +75,6 @@ function getClubById() {
 }
 
 function getStandings() {
-    if ("caches" in window) {
-        caches.match(`${baseUrl}competitions/${idLeague}/standings`).then(function (response) {
-            if (response) {
-                response.json().then(function (data) {
-                    showStanding(data);
-                })
-            }
-        });
-    }
 
     fetch(`${baseUrl}competitions/${idLeague}/standings`, {
             headers: {
