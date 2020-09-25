@@ -1,2 +1,5 @@
 # PWA Ligue1 Info
-## Submission 3 dicoding PWA
+
+A sample Single Page Application using modern vanilla JavaScript, Webpack and Progressive Web Application techniques
+
+Link: https://football-info-31ebd.web.app/
